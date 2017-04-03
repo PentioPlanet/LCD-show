@@ -7,7 +7,7 @@ Update: <br>
 Update: <br>
   v1.1-20160815<br><br>
   
-1. Instalar Raspbian official mirror <br><br> 
+1.) Instalar Raspbian official mirror <br><br> 
 ====================================================
   a)Download Raspbian official mirror:<br>
   https://www.raspberrypi.org/downloads/<br>
