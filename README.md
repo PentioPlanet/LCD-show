@@ -7,20 +7,20 @@ Update: <br>
 Update: <br>
   v1.1-20160815<br><br>
   
-1.)Step1, Install Raspbian official mirror <br><br> 
+1. Instalar Raspbian official mirror <br><br> 
 ====================================================
   a)Download Raspbian official mirror:<br>
   https://www.raspberrypi.org/downloads/<br>
   b)Use“SDFormatter.exe”to Format your TF Card<br>
   c)Use“Win32DiskImager.exe” Burning mirror to TF Card<br>
      
-2.) Step2, Clone my repo onto your pi<br><br>
+2. Clone my repo onto your pi<br><br>
 ====================================================
-```git clone https://github.com/goodtft/LCD-show.git```<br>
+```git clone https://github.com/pentioplanet/LCD-show.git```<br>
 ```chmod -R 755 LCD-show```<br>
 ```cd LCD-show/```<br>
   
-3.)Step3, According to your LCD's type, excute:
+3. According to your LCD's type, excute:
 ====================================================
 In case of 2.8" LCD<br>
   ```sudo ./LCD28-show```<br><br>
@@ -41,15 +41,16 @@ In case of 7inch(C)-1024X600 RPI LCD<br>
 If you need to switch back to the traditional HDMI display<br>
   ```sudo ./LCD-hdmi```<br><br>
 
-Wait a few minutes,the system will restart automaticall , enjoy with your LCD.<br><br>
+Aguarde unos momentos, el sistema se reiniciará automáticamente.<br><br>
 
-  NOTE:<br>
+  NOTA:<br>
   ===========================================================================================
-  if you are using the newest Raspbian version:2017-03-02<br>
-  you need to additional excute this two command bellow after Step1,2,3 excuted,<br>
-  if not so,the Resistive touch to reverse or cannot be calibrated.<br>
-  This additional command bellow is just for Raspbian-2017-03-02:<br><br>
-  ```cd LCD-show```<br>
+  En caso de estar usando la última versión de Raspbian (al momento de realizar este tutorial
+  es la fechada el 2017-03-03) necesitarás ejecutar dos comandos adicionales luego de haber 
+  realizado los pasos detallados en los apartados 1), 2) y 3) para que tu touchscreen
+  funcione correctamente.<br><br>
+  
+```cd LCD-show```<br>
 ```sudo dpkg -i -B xserver-xorg-input-evdev_1%3a2.10.3-1_armhf.deb```<br>
 ```sudo cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf```<br>
 ```sudo reboot```
