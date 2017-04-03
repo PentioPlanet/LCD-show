@@ -8,7 +8,6 @@ Update:
   v1.1-20160815
   
 1.Instalar Raspbian desde el repositorio oficial.
- 
   https://www.raspberrypi.org/downloads/
   Use“SDFormatter.exe”to Format your TF Card
   Use“Win32DiskImager.exe” Burning mirror to TF Card
