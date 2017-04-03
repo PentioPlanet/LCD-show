@@ -1,27 +1,25 @@
-LCD driver for the Raspberry PI Installation<br>
+LCD driver for the Raspberry PI Installation
 ====================================================
 
-Update: <br>
-  v1.2-20170302<br>
-  Add xserver-xorg-input-evdev_1%3a2.10.3-1_armhf.deb to support Raspbian-2017-03-02<br><br>
-Update: <br>
-  v1.1-20160815<br><br>
+Update:
+  v1.2-20170302
+  Add xserver-xorg-input-evdev_1%3a2.10.3-1_armhf.deb to support Raspbian-2017-03-02
+Update:
+  v1.1-20160815
   
-1.) Instalar Raspbian official mirror <br><br> 
-====================================================
-  a)Download Raspbian official mirror:<br>
-  https://www.raspberrypi.org/downloads/<br>
-  b)Use“SDFormatter.exe”to Format your TF Card<br>
-  c)Use“Win32DiskImager.exe” Burning mirror to TF Card<br>
+1.Instalar Raspbian desde el repositorio oficial.
+ 
+  https://www.raspberrypi.org/downloads/
+  Use“SDFormatter.exe”to Format your TF Card
+  Use“Win32DiskImager.exe” Burning mirror to TF Card
      
-2. Clone my repo onto your pi<br><br>
-====================================================
+2)Clone my repo onto your pi<br>
 ```git clone https://github.com/pentioplanet/LCD-show.git```<br>
 ```chmod -R 755 LCD-show```<br>
 ```cd LCD-show/```<br>
   
-3. According to your LCD's type, excute:
-====================================================
+3)According to your LCD's type, excute:
+<br>
 In case of 2.8" LCD<br>
   ```sudo ./LCD28-show```<br><br>
 In case of 3.2" LCD<br>
@@ -50,7 +48,6 @@ Aguarde unos momentos, el sistema se reiniciará automáticamente.<br><br>
   realizado los pasos detallados en los apartados 1), 2) y 3) para que tu touchscreen
   funcione correctamente.<br><br>
   
-```cd LCD-show```<br>
-```sudo dpkg -i -B xserver-xorg-input-evdev_1%3a2.10.3-1_armhf.deb```<br>
-```sudo cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf```<br>
-```sudo reboot```
+sudo apt-get install xserver-xorg-input-evdev<br>
+sudo cp -rf /usr/share/X11/xorg.conf.d/10-evdev.conf /usr/share/X11/xorg.conf.d/45-evdev.conf<br>
+sudo reboot<br>
